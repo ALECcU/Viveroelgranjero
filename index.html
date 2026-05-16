@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO primario -->
+  <title>Vivero El Granjero — Vivero Educativo y Experiencial en San Antonio de Prado, Medellín</title>
+  <meta name="description" content="Más de 200 especies de plantas ornamentales, suculentas, florales y macetas con asesoría personalizada. Ubicados en San Antonio de Prado, Medellín. Envíos locales.">
+  <meta name="keywords" content="vivero medellin, plantas ornamentales, suculentas, plantas interior, vivero san antonio de prado, macetas, sustrato">
+  <meta name="author" content="Vivero El Granjero">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://viveroelgranjero.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://viveroelgranjero.com/">
+  <meta property="og:title" content="Vivero El Granjero — Educativo y Experiencial en Medellín">
+  <meta property="og:description" content="Más de 200 especies con asesoría personalizada. San Antonio de Prado, Medellín.">
+  <meta property="og:image" content="https://viveroelgranjero.com/assets/img/og-image.jpg">
+  <meta property="og:locale" content="es_CO">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vivero El Granjero — Medellín">
+  <meta name="twitter:description" content="Vivero educativo y experiencial. Más de 200 especies. San Antonio de Prado.">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Vivero El Granjero",
+    "description": "Vivero educativo y experiencial con más de 200 especies. Asesoría personalizada.",
+    "url": "https://viveroelgranjero.com",
+    "telephone": "+573052090482",
+    "email": "Viveroelgranjero@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cl. 45 Sur #83-121",
+      "addressLocality": "San Antonio de Prado",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/viveroelgranjero",
+      "https://www.facebook.com/viveroelgranjero",
+      "https://www.tiktok.com/@viveroelgranjero"
+    ]
+  }
+  </script>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN con configuración custom -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            beige:         '#EAE5DC',
+            'beige-dark':  '#D9D2C5',
+            verde:         '#1F4F2E',
+            'verde-claro': '#7FAF3A',
+            'verde-light': '#E8F0E0',
+            terracota:     '#C65A2E',
+            texto:         '#4B4B4B',
+          },
+          fontFamily: {
+            display: ['"Libre Baskerville"', 'serif'],
+            sans:    ['Nunito', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos custom -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+
+<body class="bg-beige">
+
+<!-- ═══════════════════════════════════════════════════════
+     MENÚ MÓVIL
+══════════════════════════════════════════════════════════ -->
+<div id="mobile-menu" role="dialog" aria-label="Menú de navegación">
+  <button id="menu-close" aria-label="Cerrar menú"
+    class="absolute top-6 right-6 text-white text-2xl w-10 h-10 flex items-center justify-center">
+    ✕
+  </button>
+  <a href="#hero"       class="mobile-nav-link">Inicio</a>
+  <a href="#nosotros"   class="mobile-nav-link">Nosotros</a>
+  <a href="#tips"       class="mobile-nav-link">Cuidados</a>
+  <a href="catalogo.html" class="mobile-nav-link">Catálogo</a>
+  <a href="#testimonios" class="mobile-nav-link">Testimonios</a>
+  <a href="#contacto"   class="mobile-nav-link">Contacto</a>
+  <a href="https://wa.me/573052090482" target="_blank" rel="noopener"
+    class="btn-whatsapp mt-4">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    Escríbenos</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     NAVEGACIÓN
+══════════════════════════════════════════════════════════ -->
+<nav id="navbar" aria-label="Navegación principal">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#hero" class="flex items-center gap-2.5 group" aria-label="Vivero El Granjero — Inicio">
+      <span style="font-size:1.5rem; line-height:1">🌿</span>
+      <div>
+        <div style="font-family:'Libre Baskerville',serif; font-size:0.95rem; font-weight:700; color:white; line-height:1.1">
+          El Granjero
+        </div>
+        <div style="font-family:'Nunito',sans-serif; font-size:0.55rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.5)">
+          Vivero
+        </div>
+      </div>
+    </a>
+
+    <!-- Links desktop -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#nosotros"    class="nav-link" data-section="nosotros">Nosotros</a>
+      <a href="#tips"        class="nav-link" data-section="tips">Cuidados</a>
+      <a href="catalogo.html" class="nav-link">Catálogo</a>
+      <a href="#testimonios" class="nav-link" data-section="testimonios">Testimonios</a>
+      <a href="#contacto"    class="nav-link" data-section="contacto">Contacto</a>
+    </div>
+
+    <!-- Acciones -->
+    <div class="flex items-center gap-3">
+      <!-- Botón carrito -->
+      <button onclick="openCart()" aria-label="Abrir carrito de compras"
+        class="relative p-2 text-white opacity-80 hover:opacity-100 transition-opacity">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span id="cart-count" aria-live="polite" aria-label="Productos en carrito">0</span>
+      </button>
+
+      <!-- CTA WhatsApp desktop -->
+      <a href="https://wa.me/573052090482" target="_blank" rel="noopener"
+        class="hidden md:inline-flex items-center gap-2 btn-whatsapp"
+        style="padding:0.5rem 1rem; font-size:0.7rem">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        WhatsApp
+      </a>
+
+      <!-- Hamburger móvil -->
+      <button id="menu-btn" aria-label="Abrir menú"
+        class="md:hidden p-2 text-white opacity-80 hover:opacity-100 transition-opacity">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Bienvenida">
+  <div class="hero-botanical-pattern" aria-hidden="true"></div>
+
+  <!-- Imagen hero de fondo (lado derecho en desktop) -->
+  <div class="absolute right-0 top-0 bottom-0 w-full md:w-1/2 overflow-hidden" aria-hidden="true">
+    <div style="
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a4228 0%, #2d6a40 35%, #3a8a52 60%, #7FAF3A 100%);
+      opacity: 0.6;
+    "></div>
+    <!-- Ilustración botánica SVG -->
+    <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 400 600"
+      xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <ellipse cx="200" cy="500" rx="120" ry="200" fill="#7FAF3A" transform="rotate(-20 200 300)"/>
+      <ellipse cx="200" cy="500" rx="100" ry="180" fill="#7FAF3A" transform="rotate(15 200 300)"/>
+      <ellipse cx="200" cy="500" rx="80" ry="160" fill="#EAE5DC" transform="rotate(-5 200 300)"/>
+      <line x1="200" y1="500" x2="200" y2="100" stroke="#7FAF3A" stroke-width="8"/>
+      <ellipse cx="320" cy="200" rx="80" ry="130" fill="#7FAF3A" transform="rotate(30 200 300)"/>
+      <ellipse cx="100" cy="250" rx="70" ry="120" fill="#7FAF3A" transform="rotate(-25 200 300)"/>
+    </svg>
+  </div>
+  <div class="hero-image-overlay" aria-hidden="true"></div>
+
+  <!-- Contenido hero -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-32 md:py-0 w-full">
+    <div class="max-w-2xl">
+      <div class="hero-eyebrow">San Antonio de Prado · Medellín</div>
+
+      <h1 class="hero-title">
+        El vivero<br>
+        <em>educativo</em><br>
+        y experiencial
+      </h1>
+
+      <p class="hero-subtitle">
+        Más de 200 especies de plantas con asesoría personalizada
+        te decimos exactamente cuál va bien en tu espacio
+        antes de que compres.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <button onclick="scrollToCatalog()" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          Explorar catálogo
+        </button>
+        <a href="https://wa.me/573052090482?text=Hola%20Vivero%20El%20Granjero%2C%20me%20gustar%C3%ADa%20una%20asesor%C3%ADa%20personalizada%20%F0%9F%8C%BF"
+          target="_blank" rel="noopener" class="btn-secondary"
+          style="border-color:rgba(255,255,255,0.4); color:white">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Asesoría gratuita
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="absolute bottom-0 left-0 right-0 z-10 border-t"
+    style="border-color:rgba(255,255,255,0.07); background:rgba(0,0,0,0.15); backdrop-filter:blur(8px)">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-3 divide-x" style="divide-color:rgba(255,255,255,0.07)">
+        <div class="stat-card">
+          <div class="stat-number">350+</div>
+          <div class="stat-label">Clientes felices</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Especies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Asesoría personalizada</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     QUIÉNES SOMOS
+══════════════════════════════════════════════════════════ -->
+<section id="nosotros" aria-label="Quiénes somos" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+      <!-- Texto -->
+      <div class="fade-in-up">
+        <div class="section-eyebrow">Quiénes somos</div>
+        <h2 class="section-title">El vivero que pregunta<br>antes de vender</h2>
+        <div class="divider"></div>
+        <p class="section-body" style="margin-bottom:1.5rem">
+          Estamos en San Antonio de Prado desde 2023. No somos una franquicia
+          ni una tienda de cadena — lo que hay en el vivero lo seleccionamos
+          nosotros, especie por especie.
+        </p>
+        <p class="section-body" style="margin-bottom:2rem">
+          Antes de recomendarte una planta, te preguntamos: ¿cuánta luz entra
+          a tu ventana? ¿riegas seguido o se te olvida? ¿es para interior o
+          terraza? Esa conversación cambia todo. Te llevás la planta con más
+          posibilidades de sobrevivir en <em>tu</em> casa, no la más bonita del estante.
+        </p>
+
+        <!-- Valores -->
+        <div class="space-y-4">
+          <div class="value-item fade-in-up">
+            <div class="value-icon">🌱</div>
+            <div class="value-text">
+              <h4>Comercio sostenible</h4>
+              <p>Trabajamos con proveedores que cuidan el origen de las plantas. Sin químicos agresivos, sin prácticas que agoten el suelo.</p>
+            </div>
+          </div>
+          <div class="value-item fade-in-up">
+            <div class="value-icon">💚</div>
+            <div class="value-text">
+              <h4>Asesoría honesta</h4>
+              <p>Te decimos qué planta sí y cuál no funciona para tu espacio. Sin venta forzada.</p>
+            </div>
+          </div>
+          <div class="value-item fade-in-up">
+            <div class="value-icon">📚</div>
+            <div class="value-text">
+              <h4>Vivero educativo</h4>
+              <p>Cada visita tiene más de una explicación incluida. Si tienes una planta enferma, tráela — la diagnosticamos sin costo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="relative fade-in-up" style="transition-delay:0.15s">
+        <!-- Imagen principal placeholder -->
+        <div class="rounded overflow-hidden aspect-square relative"
+          style="background: linear-gradient(135deg, var(--verde-light) 0%, #c8e6c9 50%, #a5d6a7 100%)">
+          <div class="absolute inset-0 flex flex-col items-center justify-center gap-4">
+            <span style="font-size:5rem">🌿</span>
+            <p style="font-family:'Libre Baskerville',serif; font-size:1.25rem; color:var(--verde); opacity:0.5; text-align:center; padding:0 2rem">
+              Foto del vivero
+            </p>
+          </div>
+          <!-- Decoración esquina -->
+          <div class="absolute top-6 left-6 w-16 h-16 border-l-2 border-t-2"
+            style="border-color:var(--verde-claro); opacity:0.3"></div>
+          <div class="absolute bottom-6 right-6 w-16 h-16 border-r-2 border-b-2"
+            style="border-color:var(--verde-claro); opacity:0.3"></div>
+        </div>
+
+        <!-- Tarjeta flotante -->
+        <div class="absolute -bottom-8 -left-6 bg-white rounded p-5 shadow-2xl max-w-48">
+          <div style="font-family:'Libre Baskerville',serif; font-size:2.5rem; font-weight:700; color:var(--verde-claro); line-height:1">350+</div>
+          <div style="font-family:'Nunito',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--texto); margin-top:0.25rem">
+            Asesorías resueltas
+          </div>
+          <div style="font-family:'Nunito',sans-serif; font-size:0.7rem; color:#999; margin-top:0.25rem">
+            desde que abrimos en 2023
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     TIPS DE CUIDADO
+══════════════════════════════════════════════════════════ -->
+<section id="tips" aria-label="Tips de cuidado botánico"
+  class="py-24 lg:py-32" style="background-color:#F5F1EB">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16 fade-in-up">
+      <div class="section-eyebrow" style="justify-content:center">Conocimiento botánico</div>
+      <h2 class="section-title">Tips esenciales<br>para tus plantas</h2>
+      <p style="font-family:'Nunito',sans-serif; font-size:0.9rem; color:var(--texto); line-height:1.7">
+        El secreto de las plantas sanas está en entender sus necesidades reales.
+        Aquí van los consejos que compartimos con cada cliente del vivero.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="tip-card fade-in-up">
+        <span class="tip-number" aria-hidden="true">01</span>
+        <div class="tip-icon">💧</div>
+        <h3 class="tip-title">Riego inteligente</h3>
+        <p class="tip-body">
+          La mayoría de las plantas mueren por exceso de agua, no por falta.
+          Toca la tierra: si está húmeda a 2 cm de profundidad, espera.
+          Riega profundo y con menos frecuencia — las raíces necesitan aprender
+          a buscar el agua.
+        </p>
+      </div>
+
+      <div class="tip-card fade-in-up" style="transition-delay:0.1s">
+        <span class="tip-number" aria-hidden="true">02</span>
+        <div class="tip-icon">☀️</div>
+        <h3 class="tip-title">Luz y ubicación</h3>
+        <p class="tip-body">
+          Cerca de una ventana con luz indirecta es el hogar ideal para el 80%
+          de las plantas de interior. Evita el sol directo del mediodía:
+          quema las hojas. Si la planta pierde color, necesita más luz;
+          si tiene manchas oscuras, menos.
+        </p>
+      </div>
+
+      <div class="tip-card fade-in-up" style="transition-delay:0.2s">
+        <span class="tip-number" aria-hidden="true">03</span>
+        <div class="tip-icon">🌬️</div>
+        <h3 class="tip-title">Ventilación</h3>
+        <p class="tip-body">
+          Las plantas necesitan respirar. Un espacio con buena circulación de
+          aire previene hongos y fortalece los tallos. Evita colocarlas en
+          rincones cerrados sin flujo de aire. Un ventilador suave a baja
+          velocidad puede hacer maravillas.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA asesoría -->
+    <div class="text-center mt-12 fade-in-up">
+      <p style="font-family:'Nunito',sans-serif; font-size:0.875rem; color:var(--texto); margin-bottom:1.25rem">
+        ¿Tienes una planta enferma o no sabes cuál elegir?
+      </p>
+      <a href="https://wa.me/573052090482?text=Hola%2C%20quisiera%20una%20asesor%C3%ADa%20botánica%20gratuita%20🌿"
+        target="_blank" rel="noopener" class="btn-secondary">
+        Agenda tu asesoría gratuita
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CATÁLOGO — Teaser (página dedicada: catalogo.html)
+══════════════════════════════════════════════════════════ -->
+<section id="catalogo" aria-label="Vista previa del catálogo" class="py-24 lg:py-32" style="background-color:#F5F1EB">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-14 fade-in-up">
+      <div class="section-eyebrow" style="justify-content:center">Catálogo educativo</div>
+      <h2 class="section-title">Más de 200 especies<br>te esperan</h2>
+      <p style="font-family:'Nunito',sans-serif; font-size:0.9rem; color:var(--texto); line-height:1.7">
+        Plantas florales, ornamentales, suculentas, macetas y sustratos —
+        todos con información botánica detallada y cuidados paso a paso.
+      </p>
+    </div>
+
+    <!-- Preview cards de categorías -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <!-- Florales -->
+      <a href="catalogo.html?cat=florales" class="group block rounded overflow-hidden" style="text-decoration:none; background:white; box-shadow:0 2px 12px rgba(31,79,46,0.06); transition:transform 0.3s ease, box-shadow 0.3s ease" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(31,79,46,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(31,79,46,0.06)'">
+        <div style="height:120px; background:linear-gradient(135deg,#fce4ec,#f8bbd0); display:flex; align-items:center; justify-content:center; font-size:3rem">🌸</div>
+        <div style="padding:1rem">
+          <div style="font-family:'Libre Baskerville',serif; font-size:1rem; color:var(--verde); margin-bottom:0.25rem">Florales</div>
+          <div style="font-family:'Nunito',sans-serif; font-size:0.7rem; color:#999">10 especies</div>
+        </div>
+      </a>
+      <!-- Ornamentales -->
+      <a href="catalogo.html?cat=ornamentales" class="group block rounded overflow-hidden" style="text-decoration:none; background:white; box-shadow:0 2px 12px rgba(31,79,46,0.06); transition:transform 0.3s ease, box-shadow 0.3s ease" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(31,79,46,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(31,79,46,0.06)'">
+        <div style="height:120px; background:linear-gradient(135deg,#e0f2f1,#b2dfdb); display:flex; align-items:center; justify-content:center; font-size:3rem">🪴</div>
+        <div style="padding:1rem">
+          <div style="font-family:'Libre Baskerville',serif; font-size:1rem; color:var(--verde); margin-bottom:0.25rem">Ornamentales</div>
+          <div style="font-family:'Nunito',sans-serif; font-size:0.7rem; color:#999">24 especies</div>
+        </div>
+      </a>
+      <!-- Suculentas -->
+      <a href="catalogo.html?cat=suculentas" class="group block rounded overflow-hidden" style="text-decoration:none; background:white; box-shadow:0 2px 12px rgba(31,79,46,0.06); transition:transform 0.3s ease, box-shadow 0.3s ease" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(31,79,46,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(31,79,46,0.06)'">
+        <div style="height:120px; background:linear-gradient(135deg,#f9fbe7,#dcedc8); display:flex; align-items:center; justify-content:center; font-size:3rem">🌵</div>
+        <div style="padding:1rem">
+          <div style="font-family:'Libre Baskerville',serif; font-size:1rem; color:var(--verde); margin-bottom:0.25rem">Suculentas</div>
+          <div style="font-family:'Nunito',sans-serif; font-size:0.7rem; color:#999">17 especies</div>
+        </div>
+      </a>
+      <!-- Macetas -->
+      <a href="catalogo.html?cat=macetas" class="group block rounded overflow-hidden" style="text-decoration:none; background:white; box-shadow:0 2px 12px rgba(31,79,46,0.06); transition:transform 0.3s ease, box-shadow 0.3s ease" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(31,79,46,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(31,79,46,0.06)'">
+        <div style="height:120px; background:linear-gradient(135deg,#fff3e0,#ffe0b2); display:flex; align-items:center; justify-content:center; font-size:3rem">🏺</div>
+        <div style="padding:1rem">
+          <div style="font-family:'Libre Baskerville',serif; font-size:1rem; color:var(--verde); margin-bottom:0.25rem">Macetas</div>
+          <div style="font-family:'Nunito',sans-serif; font-size:0.7rem; color:#999">14 modelos</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- CTA principal -->
+    <div class="text-center fade-in-up">
+      <a href="catalogo.html" class="btn-primary" style="font-size:0.9rem; padding:1rem 2.5rem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        Ver catálogo completo — 77 productos
+      </a>
+      <p style="font-family:'Nunito',sans-serif; font-size:0.75rem; color:#bbb; margin-top:0.875rem">
+        Con filtros por categoría, búsqueda y cuidados detallados para cada especie
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     TESTIMONIOS
+══════════════════════════════════════════════════════════ -->
+<section id="testimonios" aria-label="Testimonios de clientes"
+  class="py-24 lg:py-32" style="background-color:var(--verde)">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <!-- Header -->
+    <div class="text-center mb-14 fade-in-up">
+      <div class="section-eyebrow" style="justify-content:center; color:var(--verde-claro)">
+        Lo que dicen nuestros clientes
+      </div>
+      <h2 class="section-title" style="color:white">Lo que pasó<br>después de la primera visita</h2>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="testimonial-card fade-in-up">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <div class="testimonial-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="testimonial-text">
+          Tenía un balcón completamente vacío y sin idea de qué hacer con él.
+          Me asesoraron paso a paso, desde la selección de plantas hasta cómo
+          combinar colores y texturas. Ahora es mi lugar favorito de la casa.
+        </p>
+        <div>
+          <div class="testimonial-author">Carolina Mejía</div>
+          <div class="testimonial-role">Ama de casa · San Antonio de Prado</div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in-up" style="transition-delay:0.1s">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <div class="testimonial-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="testimonial-text">
+          Nunca había podido mantener viva una planta más de dos semanas.
+          En El Granjero me explicaron el porqué — estaba regando de más.
+          Ahora tengo una terraza completamente verde y todas mis plantas
+          llevan más de ocho meses floreciendo.
+        </p>
+        <div>
+          <div class="testimonial-author">Andrés Valencia</div>
+          <div class="testimonial-role">Profesional independiente · Medellín</div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in-up" style="transition-delay:0.2s">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <div class="testimonial-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="testimonial-text">
+          Buscaba algo para regalar que durara más que unas flores de tienda.
+          Me recomendaron el sustrato adecuado para cada planta y el cambio
+          fue increíble. Las plantas de mi mamá están más vivas que nunca
+          y ella me llama cada semana a contarme.
+        </p>
+        <div>
+          <div class="testimonial-author">Marcela Ríos</div>
+          <div class="testimonial-role">Entusiasta de plantas · San Antonio de Prado</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-14 fade-in-up">
+      <a href="https://www.instagram.com/viveroelgranjero" target="_blank" rel="noopener"
+        class="btn-secondary"
+        style="border-color:rgba(255,255,255,0.3); color:rgba(255,255,255,0.8)">
+        Ver más historias en Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CONTACTO
+══════════════════════════════════════════════════════════ -->
+<section id="contacto" aria-label="Contacto" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-24">
+
+      <!-- Info -->
+      <div class="fade-in-up">
+        <div class="section-eyebrow">Hablemos</div>
+        <h2 class="section-title">Visítanos o<br>escríbenos</h2>
+        <div class="divider"></div>
+        <p class="section-body" style="margin-bottom:2rem">
+          Estamos en San Antonio de Prado, Medellín. Ven a visitarnos
+          y descubre en persona nuestra selección de más de 200 especies.
+          Si no puedes venir, cotiza por WhatsApp — respondemos siempre.
+        </p>
+
+        <!-- Info de contacto -->
+        <div style="padding:1.5rem; border-radius:4px; background:var(--verde);">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div>
+              <div class="contact-info-label">Dirección</div>
+              <p class="contact-info-value">
+                Cl. 45 Sur #83-121, San Antonio de Prado<br>
+                Medellín, Antioquia
+              </p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🕐</div>
+            <div>
+              <div class="contact-info-label">Horario</div>
+              <p class="contact-info-value">Lunes a sábado: 7:00 am – 6:00 pm</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📱</div>
+            <div>
+              <div class="contact-info-label">WhatsApp / Teléfono</div>
+              <a href="https://wa.me/573052090482" target="_blank" rel="noopener"
+                class="contact-info-value">305 209 0482</a>
+            </div>
+          </div>
+          <div class="contact-info-item" style="margin-bottom:0">
+            <div class="contact-info-icon">✉️</div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <a href="mailto:Viveroelgranjero@gmail.com" class="contact-info-value">
+                Viveroelgranjero@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Envíos -->
+        <div class="mt-4 p-4 rounded" style="background:var(--verde-light); border-left:3px solid var(--verde-claro)">
+          <p style="font-family:'Nunito',sans-serif; font-size:0.8rem; color:var(--verde); font-weight:600; margin-bottom:0.25rem">
+            🚚 Envíos a domicilio
+          </p>
+          <p style="font-family:'Nunito',sans-serif; font-size:0.75rem; color:var(--texto)">
+            Disponibles en San Antonio de Prado y alrededores.
+            Próximamente Área Metropolitana de Medellín.
+          </p>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="fade-in-up" style="transition-delay:0.15s">
+        <div class="bg-white rounded p-8" style="box-shadow:0 4px 24px rgba(31,79,46,0.06)">
+          <h3 style="font-family:'Libre Baskerville',serif; font-size:1.5rem; color:var(--verde); margin-bottom:0.5rem">
+            Cuéntanos qué necesitas
+          </h3>
+          <p style="font-family:'Nunito',sans-serif; font-size:0.8rem; color:#999; margin-bottom:1.5rem">
+            Te responderemos por WhatsApp.
+          </p>
+
+          <form id="contact-form" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nombre *</label>
+                <input type="text" id="contact-name" class="form-input"
+                  placeholder="Tu nombre" required autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">WhatsApp</label>
+                <input type="tel" id="contact-phone" class="form-input"
+                  placeholder="305 000 0000" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-message" class="form-label">¿Qué necesitas? *</label>
+              <textarea id="contact-message" class="form-textarea"
+                placeholder="Ej: Busco plantas para mi balcón con poca luz, tengo un espacio de 2m × 1m..."
+                required></textarea>
+            </div>
+
+            <!-- Política de datos -->
+            <p style="font-family:'Nunito',sans-serif; font-size:0.65rem; color:#bbb; line-height:1.5; margin-bottom:1.25rem">
+              Al enviar tus datos aceptas el tratamiento de información conforme a la
+              <strong>Ley 1581 de 2012</strong> de protección de datos personales en Colombia.
+              Tus datos solo serán usados para responderte y mejorar tu experiencia con
+              Vivero El Granjero.
+            </p>
+
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Enviar por WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer id="footer" aria-label="Pie de página">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+
+      <!-- Marca -->
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <span style="font-size:1.75rem">🌿</span>
+          <div>
+            <div style="font-family:'Libre Baskerville',serif; font-size:1.25rem; font-weight:700; color:white">
+              Vivero El Granjero
+            </div>
+            <div style="font-family:'Nunito',sans-serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.4)">
+              Educativo · Experiencial
+            </div>
+          </div>
+        </div>
+        <p style="font-family:'Nunito',sans-serif; font-size:0.8rem; color:rgba(255,255,255,0.5); line-height:1.7; max-width:320px; margin-bottom:1.5rem">
+          El paraíso al alcance de tus manos.
+          Plantas, sustratos y macetas con asesoría personalizada
+          para transformar tu hogar en San Antonio de Prado, Medellín.
+        </p>
+        <!-- Redes sociales -->
+        <div class="flex gap-3" role="list" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/viveroelgranjero" target="_blank" rel="noopener"
+            class="social-icon" aria-label="Instagram de Vivero El Granjero" role="listitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/viveroelgranjero" target="_blank" rel="noopener"
+            class="social-icon" aria-label="Facebook de Vivero El Granjero" role="listitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@viveroelgranjero" target="_blank" rel="noopener"
+            class="social-icon" aria-label="TikTok de Vivero El Granjero" role="listitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.06a8.16 8.16 0 004.77 1.52V7.14a4.85 4.85 0 01-1-.45z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navegación rápida -->
+      <div>
+        <h4 style="font-family:'Nunito',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:1rem">
+          Navegación
+        </h4>
+        <nav aria-label="Navegación del footer">
+          <ul class="space-y-2.5">
+            <li><a href="#nosotros"    class="footer-link">Quiénes somos</a></li>
+            <li><a href="#tips"        class="footer-link">Tips de cuidado</a></li>
+            <li><a href="#catalogo"    class="footer-link">Catálogo</a></li>
+            <li><a href="#testimonios" class="footer-link">Testimonios</a></li>
+            <li><a href="#contacto"    class="footer-link">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Categorías -->
+      <div>
+        <h4 style="font-family:'Nunito',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:1rem">
+          Catálogo
+        </h4>
+        <ul class="space-y-2.5">
+          <li><button onclick="document.getElementById('catalogo')?.scrollIntoView({behavior:'smooth'}); setTimeout(()=>{state.activeFilter='florales'; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter==='florales')); renderCatalog()},500)" class="footer-link text-left">🌸 Florales</button></li>
+          <li><button onclick="document.getElementById('catalogo')?.scrollIntoView({behavior:'smooth'}); setTimeout(()=>{state.activeFilter='ornamentales'; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter==='ornamentales')); renderCatalog()},500)" class="footer-link text-left">🪴 Ornamentales</button></li>
+          <li><button onclick="document.getElementById('catalogo')?.scrollIntoView({behavior:'smooth'}); setTimeout(()=>{state.activeFilter='suculentas'; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter==='suculentas')); renderCatalog()},500)" class="footer-link text-left">🌵 Suculentas</button></li>
+          <li><button onclick="document.getElementById('catalogo')?.scrollIntoView({behavior:'smooth'}); setTimeout(()=>{state.activeFilter='macetas'; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter==='macetas')); renderCatalog()},500)" class="footer-link text-left">🏺 Macetas</button></li>
+          <li><button onclick="document.getElementById('catalogo')?.scrollIntoView({behavior:'smooth'}); setTimeout(()=>{state.activeFilter='sustratos'; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter==='sustratos')); renderCatalog()},500)" class="footer-link text-left">🌱 Sustratos</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Separador -->
+    <div class="border-t pt-8" style="border-color:rgba(255,255,255,0.08)">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <p style="font-family:'Nunito',sans-serif; font-size:0.7rem; color:rgba(255,255,255,0.35); margin-bottom:0.5rem">
+            © 2026 Vivero El Granjero · Hecho con cariño y dedicación en Medellín 🌿
+          </p>
+          <p style="font-family:'Nunito',sans-serif; font-size:0.65rem; color:rgba(255,255,255,0.25); max-width:600px; line-height:1.5">
+            Al enviar tus datos aceptas el tratamiento de información conforme a la
+            <strong style="color:rgba(255,255,255,0.35)">Ley 1581 de 2012</strong>
+            de protección de datos personales en Colombia.
+          </p>
+        </div>
+        <div class="flex gap-4">
+          <span style="font-family:'Nunito',sans-serif; font-size:0.65rem; color:rgba(255,255,255,0.25)">
+            Política de privacidad
+          </span>
+          <span style="font-family:'Nunito',sans-serif; font-size:0.65rem; color:rgba(255,255,255,0.25)">
+            Aviso legal
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════
+     CARRITO LATERAL
+══════════════════════════════════════════════════════════ -->
+<div id="cart-overlay" aria-hidden="true"></div>
+
+<aside id="cart-sidebar" role="dialog" aria-label="Carrito de compras" aria-modal="true">
+  <div class="cart-header">
+    <h2 class="cart-title">Tu carrito</h2>
+    <button class="cart-close" onclick="closeCart()" aria-label="Cerrar carrito">✕</button>
+  </div>
+
+  <div id="cart-items" role="list" aria-label="Productos en el carrito">
+    <!-- JS renderiza aquí -->
+  </div>
+
+  <div class="cart-footer">
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Subtotal estimado</span>
+      <span class="cart-subtotal-value" id="cart-subtotal">$0</span>
+    </div>
+    <p class="cart-note">* Precio final confirmado por WhatsApp</p>
+    <button onclick="checkoutWhatsApp()" class="btn-whatsapp" style="width:100%; justify-content:center; margin-bottom:0.75rem">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Finalizar pedido por WhatsApp
+    </button>
+    <button onclick="closeCart()" class="btn-quote" style="width:100%; justify-content:center">
+      Seguir explorando
+    </button>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════
+     MODAL DE PRODUCTO
+══════════════════════════════════════════════════════════ -->
+<div id="product-modal" role="dialog" aria-label="Detalle del producto" aria-modal="true">
+  <div class="modal-overlay" aria-hidden="true"></div>
+  <div class="modal-content">
+    <div class="modal-image" id="modal-image">
+      <!-- JS renderiza imagen -->
+    </div>
+    <div class="modal-body" id="modal-body">
+      <!-- JS renderiza detalle -->
+    </div>
+    <button class="modal-close" id="modal-close" onclick="closeProductModal()"
+      aria-label="Cerrar detalle del producto">✕</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     WHATSAPP FLOTANTE
+══════════════════════════════════════════════════════════ -->
+<a id="whatsapp-float"
+  href="https://wa.me/573052090482?text=Hola%20Vivero%20El%20Granjero%20%F0%9F%8C%BF%20Quisiera%20m%C3%A1s%20informaci%C3%B3n"
+  target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <div class="pulse-ring" aria-hidden="true"></div>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ═══════════════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════════════════ -->
+<script src="data/products.js"></script>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

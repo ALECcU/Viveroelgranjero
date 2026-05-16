@@ -1,0 +1,1252 @@
+/* ============================================================
+   VIVERO EL GRANJERO — Custom Styles
+   Stack: Tailwind CSS + estas clases custom
+   ============================================================ */
+
+/* ── Variables de marca ────────────────────────────────── */
+:root {
+  --beige:        #EAE5DC;
+  --verde:        #1F4F2E;
+  --verde-claro:  #7FAF3A;
+  --terracota:    #C65A2E;
+  --texto:        #4B4B4B;
+  --blanco:       #FFFFFF;
+  --beige-dark:   #D9D2C5;
+  --verde-light:  #E8F0E0;
+}
+
+/* ── Reset & base ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--beige);
+  color: var(--texto);
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Tipografía ─────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: 'Libre Baskerville', serif;
+  color: var(--verde);
+  line-height: 1.2;
+}
+
+.font-display { font-family: 'Libre Baskerville', serif; }
+
+/* ── Botones ────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--terracota);
+  color: var(--blanco);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.875rem 2rem;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background-color: #b04e26;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(198, 90, 46, 0.3);
+}
+.btn-primary:active { transform: translateY(0); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--verde);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.875rem 2rem;
+  border-radius: 2px;
+  border: 2px solid var(--verde);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  background-color: var(--verde);
+  color: var(--blanco);
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #25D366;
+  color: var(--blanco);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.btn-whatsapp:hover {
+  background-color: #1da851;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+.btn-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background-color: var(--verde);
+  color: var(--blanco);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.btn-cart:hover { background-color: #17402400; }
+.btn-cart:hover { background-color: #163d23; }
+
+.btn-quote {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background-color: transparent;
+  color: var(--verde);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  border-radius: 2px;
+  border: 1.5px solid var(--verde);
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.btn-quote:hover {
+  background-color: var(--verde);
+  color: var(--blanco);
+}
+
+.btn-encargo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background-color: transparent;
+  color: var(--terracota);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  border-radius: 2px;
+  border: 1.5px solid var(--terracota);
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.btn-encargo:hover {
+  background-color: var(--terracota);
+  color: var(--blanco);
+}
+
+/* ── Navegación ─────────────────────────────────────────── */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: all 0.35s ease;
+}
+#navbar.scrolled {
+  background-color: var(--verde);
+  box-shadow: 0 2px 20px rgba(31, 79, 46, 0.2);
+}
+#navbar.transparent {
+  background-color: transparent;
+}
+
+.nav-link {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  position: relative;
+  transition: color 0.2s ease;
+  opacity: 0.85;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--verde-claro);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-link:hover { opacity: 1; }
+.nav-link:hover::after { transform: scaleX(1); }
+.nav-link.active { opacity: 1; }
+.nav-link.active::after { transform: scaleX(1); }
+
+/* ── Hero ───────────────────────────────────────────────── */
+#hero {
+  min-height: 100svh;
+  background-color: var(--verde);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-botanical-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M40 0 C40 0 20 20 20 40 C20 60 40 80 40 80 C40 80 60 60 60 40 C60 20 40 0 40 0Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: linear-gradient(to right, var(--verde) 0%, transparent 40%);
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  color: var(--blanco);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+.hero-title em {
+  color: var(--verde-claro);
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Sección genérica ───────────────────────────────────── */
+.section-eyebrow {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--verde);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.section-body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: var(--texto);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+/* ── Tarjetas de Tips ───────────────────────────────────── */
+.tip-card {
+  background-color: var(--blanco);
+  border-radius: 4px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(31, 79, 46, 0.1);
+}
+.tip-number {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--verde-claro);
+  opacity: 0.15;
+  line-height: 1;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.tip-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--verde-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+}
+.tip-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25rem;
+  color: var(--verde);
+  margin-bottom: 0.75rem;
+}
+.tip-body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.875rem;
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+/* ── Catálogo — Filtros ─────────────────────────────────── */
+#catalog-filters {
+  position: sticky;
+  top: 64px;
+  z-index: 50;
+  background-color: var(--beige);
+  border-bottom: 1px solid var(--beige-dark);
+  transition: top 0.3s;
+}
+
+.filter-btn {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.625rem 1.25rem;
+  border-radius: 2px;
+  border: 1.5px solid var(--beige-dark);
+  background-color: transparent;
+  color: var(--texto);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.filter-btn:hover {
+  border-color: var(--verde);
+  color: var(--verde);
+}
+.filter-btn.active {
+  background-color: var(--verde);
+  border-color: var(--verde);
+  color: var(--blanco);
+}
+
+/* ── Tarjeta de producto ────────────────────────────────── */
+.product-card {
+  background-color: var(--blanco);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(31, 79, 46, 0.12);
+}
+
+.product-image-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--verde-light);
+}
+.product-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.product-card:hover .product-image-wrap img {
+  transform: scale(1.05);
+}
+
+.product-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  transition: transform 0.5s ease;
+}
+.product-card:hover .product-placeholder { transform: scale(1.03); }
+
+.product-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.625rem;
+  border-radius: 1px;
+  z-index: 1;
+}
+.badge-encargo {
+  background-color: var(--terracota);
+  color: var(--blanco);
+}
+.badge-agotado {
+  background-color: #666;
+  color: var(--blanco);
+}
+.badge-destacado {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+}
+
+.product-body {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-category-tag {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+  margin-bottom: 0.375rem;
+}
+
+.product-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  color: var(--verde);
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+
+.product-scientific {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #888;
+  margin-bottom: 0.625rem;
+}
+
+.product-env {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.65rem;
+  color: #999;
+  margin-bottom: 0.75rem;
+  flex: 1;
+}
+
+.product-price {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--verde);
+  margin-bottom: 0.875rem;
+}
+.product-price.consultar {
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.product-price-note {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.6rem;
+  color: #aaa;
+  font-weight: 400;
+  margin-left: 0.25rem;
+}
+
+/* ── Grid de catálogo ───────────────────────────────────── */
+#products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  #products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  #products-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1280px) {
+  #products-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ── Empty state ────────────────────────────────────────── */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #999;
+}
+.empty-state p:first-child {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Testimonios ────────────────────────────────────────── */
+.testimonial-card {
+  background-color: var(--blanco);
+  border-radius: 4px;
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover { transform: translateY(-3px); }
+.testimonial-quote-mark {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 5rem;
+  color: var(--verde-claro);
+  opacity: 0.2;
+  line-height: 0.8;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.testimonial-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  color: var(--texto);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+.testimonial-author {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--verde);
+}
+.testimonial-role {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  color: #999;
+}
+.testimonial-stars {
+  color: #F6C90E;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+/* ── Stats ──────────────────────────────────────────────── */
+.stat-card {
+  text-align: center;
+  padding: 1.5rem;
+}
+.stat-number {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--verde-claro);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.stat-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ── Formulario de contacto ─────────────────────────────── */
+.form-group { margin-bottom: 1.25rem; }
+.form-label {
+  display: block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: 0.5rem;
+}
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.875rem;
+  color: var(--texto);
+  background-color: var(--blanco);
+  border: 1.5px solid var(--beige-dark);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--verde);
+}
+.form-textarea { resize: vertical; min-height: 120px; }
+.form-input::placeholder,
+.form-textarea::placeholder { color: #bbb; }
+
+/* ── Carrito lateral ────────────────────────────────────── */
+#cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--blanco);
+  z-index: 200;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: -8px 0 40px rgba(0,0,0,0.12);
+}
+#cart-sidebar.open { transform: translateX(0); }
+
+#cart-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(31, 79, 46, 0.4);
+  z-index: 199;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  backdrop-filter: blur(2px);
+}
+#cart-overlay.open { opacity: 1; pointer-events: all; }
+
+.cart-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--beige-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25rem;
+  color: var(--verde);
+}
+.cart-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--beige);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--verde);
+  transition: background-color 0.2s;
+}
+.cart-close:hover { background-color: var(--beige-dark); }
+
+#cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.5rem;
+}
+
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--beige);
+  align-items: flex-start;
+}
+.cart-item-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: var(--verde-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.cart-item-info { flex: 1; min-width: 0; }
+.cart-item-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.9rem;
+  color: var(--verde);
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cart-item-price {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--terracota);
+}
+.cart-qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.qty-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid var(--beige-dark);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--verde);
+  transition: all 0.15s;
+}
+.qty-btn:hover { border-color: var(--verde); background-color: var(--verde-light); }
+.qty-display {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--verde);
+  min-width: 20px;
+  text-align: center;
+}
+.cart-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 0.9rem;
+  padding: 0.25rem;
+  transition: color 0.2s;
+}
+.cart-remove:hover { color: var(--terracota); }
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+  color: #bbb;
+  text-align: center;
+  padding: 2rem;
+}
+.cart-empty-icon { font-size: 3rem; opacity: 0.4; }
+.cart-empty p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+}
+
+.cart-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--beige-dark);
+  background-color: var(--blanco);
+}
+.cart-subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.cart-subtotal-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+}
+.cart-subtotal-value {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--verde);
+}
+.cart-note {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.65rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* ── Modal de producto ──────────────────────────────────── */
+#product-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+#product-modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(31, 79, 46, 0.5);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+.modal-content {
+  position: relative;
+  background-color: var(--blanco);
+  border-radius: 4px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.2);
+  transform: scale(0.95) translateY(20px);
+  transition: transform 0.3s ease;
+}
+#product-modal.open .modal-content {
+  transform: scale(1) translateY(0);
+}
+@media (max-width: 640px) {
+  .modal-content { grid-template-columns: 1fr; }
+}
+.modal-image {
+  aspect-ratio: 1;
+  background-color: var(--verde-light);
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 640px) {
+  .modal-image { aspect-ratio: 4/3; }
+}
+.modal-image img,
+.modal-image .product-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal-body { padding: 2.5rem; overflow-y: auto; }
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255,255,255,0.9);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--verde);
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+.modal-close:hover { background-color: var(--blanco); transform: scale(1.05); }
+
+.care-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.care-item {
+  background-color: var(--verde-light);
+  border-radius: 2px;
+  padding: 0.875rem;
+}
+.care-item-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.care-item-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+/* ── WhatsApp flotante ──────────────────────────────────── */
+#whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanco);
+  font-size: 1.5rem;
+  text-decoration: none;
+  z-index: 90;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+}
+#whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.5);
+}
+#whatsapp-float .pulse-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.4);
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 1; }
+  80%, 100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* ── Carrito badge ──────────────────────────────────────── */
+#cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: var(--terracota);
+  color: var(--blanco);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#cart-count.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+#footer {
+  background-color: var(--verde);
+}
+.footer-link {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-link:hover { color: var(--blanco); }
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+.social-icon:hover {
+  border-color: var(--verde-claro);
+  color: var(--verde-claro);
+  background-color: rgba(127, 175, 58, 0.1);
+}
+
+/* ── Divisor decorativo ─────────────────────────────────── */
+.divider {
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--verde-claro), transparent);
+  margin: 1.5rem 0;
+}
+.divider-center {
+  margin: 1.5rem auto;
+}
+
+/* ── Animaciones de entrada ─────────────────────────────── */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-up:nth-child(2) { transition-delay: 0.1s; }
+.fade-in-up:nth-child(3) { transition-delay: 0.2s; }
+.fade-in-up:nth-child(4) { transition-delay: 0.3s; }
+
+/* ── Placeholders por categoría ─────────────────────────── */
+.placeholder-populares  { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+.placeholder-florales   { background: linear-gradient(135deg, #fce4ec, #f8bbd0); }
+.placeholder-ornamentales { background: linear-gradient(135deg, #e0f2f1, #b2dfdb); }
+.placeholder-suculentas { background: linear-gradient(135deg, #f9fbe7, #dcedc8); }
+.placeholder-cercos     { background: linear-gradient(135deg, #e8f5e9, #a5d6a7); }
+.placeholder-macetas    { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
+.placeholder-sustratos  { background: linear-gradient(135deg, #efebe9, #d7ccc8); }
+
+/* ── Scrollbar custom ───────────────────────────────────── */
+#cart-items::-webkit-scrollbar,
+.modal-content::-webkit-scrollbar { width: 4px; }
+#cart-items::-webkit-scrollbar-track,
+.modal-content::-webkit-scrollbar-track { background: var(--beige); }
+#cart-items::-webkit-scrollbar-thumb,
+.modal-content::-webkit-scrollbar-thumb { background-color: var(--beige-dark); border-radius: 2px; }
+
+/* ── Mobile menu ────────────────────────────────────────── */
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--verde);
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#mobile-menu.open { transform: translateX(0); }
+.mobile-nav-link {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+  color: var(--blanco);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.mobile-nav-link:hover { opacity: 1; }
+
+/* ── Sección Nosotros ───────────────────────────────────── */
+.value-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.value-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--verde-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  border: 1.5px solid var(--verde-claro);
+}
+.value-text h4 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: 0.25rem;
+}
+.value-text p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+/* ── Responsive utilidades ──────────────────────────────── */
+@media (max-width: 768px) {
+  .modal-body { padding: 1.5rem; }
+  .care-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Search bar ─────────────────────────────────────────── */
+#product-search {
+  width: 100%;
+  max-width: 340px;
+  padding: 0.625rem 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  color: var(--texto);
+  background-color: var(--blanco);
+  border: 1.5px solid var(--beige-dark);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+#product-search:focus { border-color: var(--verde); }
+#product-search::placeholder { color: #bbb; }
+
+/* ── Notification toast ─────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 5rem;
+  right: 1.5rem;
+  background-color: var(--verde);
+  color: var(--blanco);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 2px;
+  z-index: 500;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 16px rgba(31, 79, 46, 0.25);
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ── Sección de contacto info ───────────────────────────── */
+.contact-info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.contact-info-icon {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(127, 175, 58, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: var(--verde-claro);
+  border: 1px solid rgba(127, 175, 58, 0.2);
+}
+.contact-info-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+  margin-bottom: 0.2rem;
+}
+.contact-info-value {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.875rem;
+  color: var(--blanco);
+  text-decoration: none;
+}
+a.contact-info-value:hover { color: var(--verde-claro); }
+
+/* ── Print ──────────────────────────────────────────────── */
+@media print {
+  #navbar, #cart-sidebar, #cart-overlay, #product-modal,
+  #whatsapp-float, #mobile-menu, .btn-cart, .btn-quote, .btn-encargo {
+    display: none !important;
+  }
+}
