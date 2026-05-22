@@ -78,7 +78,7 @@ const PRODUCTS = [
     price: 8000,
     stock: "available",
     orderType: "direct",
-    image: null,
+    image: "imganes Catalogo/Clavelina.jpg",
     tags: ["floral", "colorida"],
     care: {
       watering: "Riego regular, cada 5-7 días. No dejes secar completamente.",
@@ -91,7 +91,7 @@ const PRODUCTS = [
   // ── FLORALES ─────────────────────────────────────────────
   {
     id: "FLO-001",
-    name: "Besito de Flor",
+    name: "Besito",
     scientificName: "Impatiens walleriana",
     category: "florales",
     environment: "Exterior / Interior",
@@ -170,7 +170,7 @@ const PRODUCTS = [
     price: 10500,
     stock: "available",
     orderType: "direct",
-    image: "imganes Catalogo/Basito.jpg",
+    image: "imganes Catalogo/Corazon Herido.jpg",
     tags: ["floral", "ornamental"],
     care: {
       watering: "Riego moderado, cada 5-7 días.",
@@ -260,7 +260,7 @@ const PRODUCTS = [
     price: 8000,
     stock: "available",
     orderType: "direct",
-    image: "imganes Catalogo/Novio.png",
+    image: "imganes Catalogo/Cupea blanca.jpg",
     tags: ["floral", "exterior", "mini"],
     care: {
       watering: "Riego moderado, tolera algo de sequía.",
@@ -316,7 +316,7 @@ const PRODUCTS = [
     price: 32900,
     stock: "available",
     orderType: "direct",
-    image: "imganes Catalogo/tronco de brazil.jpg",
+    image: "imganes Catalogo/Fittonia Exotica.jpg",
     tags: ["interior", "colorida", "nervada"],
     care: {
       watering: "Riego frecuente. Mantén sustrato ligeramente húmedo siempre.",
@@ -334,7 +334,7 @@ const PRODUCTS = [
     price: 13000,
     stock: "available",
     orderType: "direct",
-    image: "imganes Catalogo/Basito.jpg",
+    image: "imganes Catalogo/Miami Exotico.jpg",
     tags: ["interior", "tropical", "exótico"],
     care: {
       watering: "Riego moderado, cada 7-10 días.",
@@ -388,7 +388,7 @@ const PRODUCTS = [
     price: 15000,
     stock: "available",
     orderType: "direct",
-    image: "imganes Catalogo/Calathea.jpg",
+    image: "imganes Catalogo/Beynia.jpg",
     tags: ["interior", "variegado", "compacto"],
     care: {
       watering: "Riego regular, mantén húmedo sin encharcar.",
@@ -460,7 +460,7 @@ const PRODUCTS = [
     price: 47500,
     stock: "available",
     orderType: "whatsapp",
-    image: "imganes Catalogo/Alocacia Fredic.jpg",
+    image: "imganes Catalogo/Carnivora venus.jpg",
     tags: ["carnívora", "exótico", "especial", "por-encargo"],
     care: {
       watering: "Agua destilada o lluvia ÚNICAMENTE. Nunca agua de grifo.",
@@ -1150,7 +1150,7 @@ const PRODUCTS = [
     price: 14000,
     stock: "available",
     orderType: "direct",
-    image: "imganes Catalogo/Bowl.jpg",
+    image: "imganes Catalogo/Rattan Mu mediana.jpg",
     tags: ["maceta", "rattan", "natural"],
     dimensions: "19.5DM × 19.5cm alto",
     colorOptions: false,
@@ -1225,7 +1225,7 @@ const PRODUCTS = [
     price: 9900,
     stock: "available",
     orderType: "direct",
-    image: "imganes Catalogo/Prisma No18.jpg",
+    image: "imganes Catalogo/Roma pequeña.jpg",
     tags: ["maceta", "clásica", "colores"],
     dimensions: null,
     colorOptions: true,
@@ -1255,7 +1255,7 @@ const PRODUCTS = [
     price: 16900,
     stock: "available",
     orderType: "direct",
-    image: "imganes Catalogo/Roma Grande.jpg",
+    image: "imganes Catalogo/Rattan redonda.jpg",
     tags: ["maceta", "rattan", "redonda"],
     dimensions: "26 × 23cm",
     colorOptions: false,
@@ -1347,7 +1347,7 @@ const PRODUCTS = [
     price: 6000,
     stock: "available",
     orderType: "direct",
-    image: "imganes Catalogo/Estriada No36.jpg",
+    image: "imganes Catalogo/simbolo sustratos (1).png",
     tags: ["sustrato", "universal", "mezcla"],
     dimensions: "10 kg",
     care: null,
