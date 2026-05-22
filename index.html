@@ -207,22 +207,22 @@
   <div class="hero-image-overlay" aria-hidden="true"></div>
 
   <!-- Contenido hero -->
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-32 md:py-0 w-full">
-    <div class="max-w-2xl">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-32 md:py-0 w-full" style="display:flex; justify-content:space-between; align-items:center; gap:4rem;">
+    <div class="max-w-2xl" style="flex:1;">
       <div class="hero-eyebrow">San Antonio de Prado · Medellín</div>
-
+ 
       <h1 class="hero-title">
         El paraíso al<br>
         <em>alcance</em><br>
         de tus manos.
       </h1>
-
+ 
       <p class="hero-subtitle">
         Más de 200 especies de plantas con asesoría personalizada
         te decimos exactamente cuál va bien en tu espacio
         antes de que compres.
       </p>
-
+ 
       <div class="flex flex-wrap gap-4">
         <button onclick="scrollToCatalog()" class="btn-primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -241,6 +241,12 @@
         </a>
       </div>
     </div>
+ 
+    <!-- Contenedor del logo flotante (derecha) -->
+    <div class="hidden lg:flex items-center justify-center" style="max-width:420px; width:100%; aspect-ratio:1; flex-shrink:0;">
+      <img src="imganes Catalogo/logo_hero.png" alt="Logo Vivero El Granjero" class="hero-floating-logo" style="width:100%; height:100%; object-fit:contain;">
+    </div>
+  </div>
   </div>
 
   <!-- Stats bar -->
@@ -275,7 +281,7 @@
       <!-- Texto -->
       <div class="fade-in-up">
         <div class="section-eyebrow">Quiénes somos</div>
-        <h2 class="section-title">Las plantas no transforman<br>solo espacios, también<br>transforman cómo te sientes.</h2>
+        <h2 class="section-title">Las plantas tienen el poder<br>de transformar tu espacio<br>y el cómo te sientes.</h2>
         <div class="divider"></div>
         <p class="section-body" style="margin-bottom:1.5rem">
           Vivero El Granjero nació como una forma de reinventarse, construir algo propio
@@ -298,21 +304,21 @@
         <!-- Valores -->
         <div class="space-y-4">
           <div class="value-item fade-in-up">
-            <div class="value-icon">🌱</div>
+            <div class="value-icon"><span class="animated-number-icon">01</span></div>
             <div class="value-text">
               <h4>Comercio sostenible</h4>
               <p>Trabajamos con proveedores que cuidan el origen de las plantas. Sin químicos agresivos, sin prácticas que agoten el suelo.</p>
             </div>
           </div>
           <div class="value-item fade-in-up">
-            <div class="value-icon">💚</div>
+            <div class="value-icon"><span class="animated-number-icon">02</span></div>
             <div class="value-text">
               <h4>Asesoría honesta</h4>
               <p>Te decimos qué planta sí y cuál no funciona para tu espacio. Sin venta forzada.</p>
             </div>
           </div>
           <div class="value-item fade-in-up">
-            <div class="value-icon">📚</div>
+            <div class="value-icon"><span class="animated-number-icon">03</span></div>
             <div class="value-text">
               <h4>Vivero educativo</h4>
               <p>Cada visita tiene más de una explicación incluida. Si tienes una planta enferma, tráela — la diagnosticamos sin costo.</p>
@@ -337,7 +343,7 @@
 
         <!-- Tarjeta flotante -->
         <div class="absolute -bottom-8 -left-6 bg-white rounded p-5 shadow-2xl max-w-48">
-          <div style="font-family:'Libre Baskerville',serif; font-size:2.5rem; font-weight:700; color:var(--verde-claro); line-height:1">200+</div>
+          <div style="font-family:'Libre Baskerville',serif; font-size:2.5rem; font-weight:700; color:var(--verde-claro); line-height:1; text-shadow: 0 0 16px rgba(26, 66, 40, 0.4);">200+</div>
           <div style="font-family:'Nunito',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--texto); margin-top:0.25rem">
             Clientes felices
           </div>
@@ -372,7 +378,9 @@
     <div class="grid md:grid-cols-3 gap-6">
       <div class="tip-card fade-in-up">
         <span class="tip-number" aria-hidden="true">01</span>
-        <div class="tip-icon">💧</div>
+        <div class="tip-icon" style="overflow:hidden; border:1px solid rgba(127,175,58,0.2); padding:0;">
+          <img src="imganes Catalogo/Riego.png" alt="Riego" style="width:100%; height:100%; object-fit:cover;">
+        </div>
         <h3 class="tip-title">Riego inteligente</h3>
         <p class="tip-body">
           La mayoría de las plantas mueren por exceso de agua, no por falta.
@@ -384,7 +392,9 @@
 
       <div class="tip-card fade-in-up" style="transition-delay:0.1s">
         <span class="tip-number" aria-hidden="true">02</span>
-        <div class="tip-icon">☀️</div>
+        <div class="tip-icon" style="overflow:hidden; border:1px solid rgba(127,175,58,0.2); padding:0;">
+          <img src="imganes Catalogo/SOL.png" alt="Luz solar" style="width:100%; height:100%; object-fit:cover;">
+        </div>
         <h3 class="tip-title">Luz y ubicación</h3>
         <p class="tip-body">
           Cerca de una ventana con luz indirecta es el hogar ideal para el 80%
@@ -396,7 +406,9 @@
 
       <div class="tip-card fade-in-up" style="transition-delay:0.2s">
         <span class="tip-number" aria-hidden="true">03</span>
-        <div class="tip-icon">🌬️</div>
+        <div class="tip-icon" style="overflow:hidden; border:1px solid rgba(127,175,58,0.2); padding:0;">
+          <img src="imganes Catalogo/Ventilacion.png" alt="Ventilación" style="width:100%; height:100%; object-fit:cover;">
+        </div>
         <h3 class="tip-title">Ventilación</h3>
         <p class="tip-body">
           Las plantas necesitan respirar. Un espacio con buena circulación de
@@ -582,51 +594,85 @@
         </p>
 
         <!-- Info de contacto -->
-        <div style="padding:1.5rem; border-radius:4px; background:var(--verde);">
-          <div class="contact-info-item">
-            <div class="contact-info-icon">📍</div>
+        <div style="padding:1.5rem; border-radius:8px; background:var(--verde); display:flex; flex-direction:column; gap:1.25rem;">
+          
+          <!-- Dirección (Maps) -->
+          <a href="https://www.google.com/maps/place/Vivero+el+Granjero/@6.182183,-75.660659,230m/data=!3m1!1e3!4m6!3m5!1s0x8e4681a5aa181dd1:0x5ef6890ab765b12c!8m2!3d6.1823276!4d-75.660123!16s%2Fg%2F11xv_d2cnz!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="contact-info-item-link" style="text-decoration:none; display:flex; gap:1rem; align-items:flex-start;">
+            <div class="contact-info-icon" style="color:var(--verde-claro); border-color:rgba(127,175,58,0.3); background:rgba(255,255,255,0.05); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
             <div>
-              <div class="contact-info-label">Dirección</div>
-              <p class="contact-info-value">
+              <div class="contact-info-label" style="font-family:'Nunito',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--verde-claro); margin-bottom:0.2rem;">Dirección (Ver ubicación en Google Maps)</div>
+              <p class="contact-info-value" style="font-family:'Nunito',sans-serif; font-size:0.85rem; color:var(--blanco); margin:0; line-height:1.4;">
                 Cl. 45 Sur #83-121, San Antonio de Prado<br>
                 Medellín, Antioquia
               </p>
             </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">🕐</div>
-            <div>
-              <div class="contact-info-label">Horario</div>
-              <p class="contact-info-value">Lunes a sábado: 7:00 am – 6:00 pm</p>
+          </a>
+
+          <!-- Horario -->
+          <a href="https://wa.me/573052090482?text=Hola!%20Me%20gustar%C3%ADa%20agendar%20una%20visita%20al%20vivero." target="_blank" rel="noopener" class="contact-info-item-link" style="text-decoration:none; display:flex; gap:1rem; align-items:flex-start;">
+            <div class="contact-info-icon" style="color:var(--verde-claro); border-color:rgba(127,175,58,0.3); background:rgba(255,255,255,0.05); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">📱</div>
             <div>
-              <div class="contact-info-label">WhatsApp / Teléfono</div>
-              <a href="https://wa.me/573052090482" target="_blank" rel="noopener"
-                class="contact-info-value">305 209 0482</a>
+              <div class="contact-info-label" style="font-family:'Nunito',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--verde-claro); margin-bottom:0.2rem;">Horarios (Agenda tu visita)</div>
+              <p class="contact-info-value" style="font-family:'Nunito',sans-serif; font-size:0.85rem; color:var(--blanco); margin:0; line-height:1.4;">
+                <strong>Agenda tu visita:</strong> Lunes a Viernes de 7:00 am - 6:00 pm<br>
+                <strong>Abierto al público:</strong> Sábados y Domingos de 2:00 pm a 6:00 pm
+              </p>
             </div>
-          </div>
-          <div class="contact-info-item" style="margin-bottom:0">
-            <div class="contact-info-icon">✉️</div>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/573052090482" target="_blank" rel="noopener" class="contact-info-item-link" style="text-decoration:none; display:flex; gap:1rem; align-items:flex-start;">
+            <div class="contact-info-icon" style="color:var(--verde-claro); border-color:rgba(127,175,58,0.3); background:rgba(255,255,255,0.05); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
             <div>
-              <div class="contact-info-label">Email</div>
-              <a href="mailto:Viveroelgranjero@gmail.com" class="contact-info-value">
-                Viveroelgranjero@gmail.com</a>
+              <div class="contact-info-label" style="font-family:'Nunito',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--verde-claro); margin-bottom:0.2rem;">WhatsApp / Teléfono (Escríbenos)</div>
+              <p class="contact-info-value" style="font-family:'Nunito',sans-serif; font-size:0.85rem; color:var(--blanco); margin:0; line-height:1.4;">
+                305 209 0482
+              </p>
             </div>
-          </div>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:Viveroelgranjero@gmail.com" class="contact-info-item-link" style="text-decoration:none; display:flex; gap:1rem; align-items:flex-start;">
+            <div class="contact-info-icon" style="color:var(--verde-claro); border-color:rgba(127,175,58,0.3); background:rgba(255,255,255,0.05); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <div>
+              <div class="contact-info-label" style="font-family:'Nunito',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--verde-claro); margin-bottom:0.2rem;">Email (Escríbenos)</div>
+              <p class="contact-info-value" style="font-family:'Nunito',sans-serif; font-size:0.85rem; color:var(--blanco); margin:0; line-height:1.4;">
+                Viveroelgranjero@gmail.com
+              </p>
+            </div>
+          </a>
+
         </div>
 
-        <!-- Envíos -->
-        <div class="mt-4 p-4 rounded" style="background:var(--verde-light); border-left:3px solid var(--verde-claro)">
-          <p style="font-family:'Nunito',sans-serif; font-size:0.8rem; color:var(--verde); font-weight:600; margin-bottom:0.25rem">
-            🚚 Envíos a domicilio
-          </p>
-          <p style="font-family:'Nunito',sans-serif; font-size:0.75rem; color:var(--texto)">
-            Disponibles en San Antonio de Prado y alrededores.
-            Próximamente Área Metropolitana de Medellín.
-          </p>
+        <!-- Envíos y Medios de Pago -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <!-- Domicilio -->
+          <div class="p-4 rounded" style="background:var(--verde-light); border-left:3px solid var(--verde-claro); display:flex; flex-direction:column; justify-content:center;">
+            <p style="font-family:'Nunito',sans-serif; font-size:0.8rem; color:var(--verde); font-weight:600; margin-bottom:0.25rem; display:flex; align-items:center; gap:0.25rem;">
+              🚚 Envíos a domicilio
+            </p>
+            <p style="font-family:'Nunito',sans-serif; font-size:0.75rem; color:var(--texto); margin:0; line-height:1.4;">
+              Disponibles en San Antonio de Prado. También hacemos envíos al área metropolitana, pero tienden a demorarse un poco más.
+            </p>
+          </div>
+
+          <!-- Medios de Pago -->
+          <div class="p-4 rounded" style="background:var(--verde-light); border-left:3px solid var(--terracota); display:flex; flex-direction:column; justify-content:center;">
+            <p style="font-family:'Nunito',sans-serif; font-size:0.8rem; color:var(--verde); font-weight:600; margin-bottom:0.25rem; display:flex; align-items:center; gap:0.25rem;">
+              💳 Medios de pago
+            </p>
+            <p style="font-family:'Nunito',sans-serif; font-size:0.75rem; color:var(--texto); margin:0; line-height:1.4;">
+              Aceptamos pagos en <strong>Efectivo</strong>, transferencias por <strong>Bancolombia</strong>, <strong>Nequi</strong> y <strong>Llaves (Transfiya)</strong>.
+            </p>
+          </div>
         </div>
       </div>
 
