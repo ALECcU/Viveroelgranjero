@@ -52,8 +52,13 @@ const getCategoryLabel = (cat) => ({
 // ── Renderizado de imagen / placeholder ─────────────────
 function renderProductImage(product, forModal = false) {
   if (product.image) {
-    return `<img src="${product.image}" alt="${product.name}" loading="lazy"
-      class="w-full h-full object-cover">`;
+    if (forModal) {
+      return `<img src="${product.image}" alt="${product.name}" loading="lazy"
+        class="w-full h-full object-cover">`;
+    }
+    const placeholderSrc = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+    return `<img src="${placeholderSrc}" data-src="${product.image}" alt="${product.name}"
+      class="w-full h-full object-cover lazy-load">`;
   }
   const size = forModal ? 'text-6xl' : 'text-4xl';
   return `
@@ -64,6 +69,27 @@ function renderProductImage(product, forModal = false) {
         ${product.name}
       </span>
     </div>`;
+}
+
+function initLazyImages() {
+  const images = document.querySelectorAll('img.lazy-load');
+  if (!images.length) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const img = entry.target;
+      const src = img.dataset.src;
+      if (src) {
+        img.src = src;
+        img.removeAttribute('data-src');
+        img.classList.remove('lazy-load');
+      }
+      obs.unobserve(img);
+    });
+  }, { rootMargin: '200px 0px 200px 0px', threshold: 0.01 });
+
+  images.forEach(img => observer.observe(img));
 }
 
 // ── Renderizado de una tarjeta de producto ───────────────
@@ -169,6 +195,7 @@ function renderCatalog() {
   }
 
   grid.innerHTML = filtered.map(renderProductCard).join('');
+  initLazyImages();
   initFadeObserver();
 }
 

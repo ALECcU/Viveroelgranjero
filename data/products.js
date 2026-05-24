@@ -273,7 +273,7 @@ const PRODUCTS = [
   // ── ORNAMENTALES ─────────────────────────────────────────
   {
     id: "ORN-001",
-    name: "Tronco de Basil",
+    name: "Tronco de Brasil",
     scientificName: null,
     category: "ornamentales",
     environment: "Interior",
