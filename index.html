@@ -10,14 +10,17 @@
   <meta name="keywords" content="vivero medellin, plantas ornamentales, suculentas, plantas interior, vivero san antonio de prado, macetas, sustrato">
   <meta name="author" content="Vivero El Granjero">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://viveroelgranjero.com/">
+  <link rel="canonical" href="https://viveroelgranjero.netlify.app/">
+  <!-- Recursos para agentes de IA -->
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="AI Agent Instructions">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://viveroelgranjero.com/">
+  <meta property="og:url" content="https://viveroelgranjero.netlify.app/">
   <meta property="og:title" content="Vivero El Granjero — Educativo y Experiencial en Medellín">
   <meta property="og:description" content="Más de 200 especies con asesoría personalizada. San Antonio de Prado, Medellín.">
-  <meta property="og:image" content="https://viveroelgranjero.com/assets/img/og-image.jpg">
+  <meta property="og:image" content="https://viveroelgranjero.netlify.app/assets/img/og-image.jpg">
   <meta property="og:locale" content="es_CO">
 
   <!-- Twitter Card -->
@@ -32,22 +35,30 @@
     "@type": "LocalBusiness",
     "name": "Vivero El Granjero",
     "description": "Vivero educativo y experiencial con más de 200 especies. Asesoría personalizada.",
-    "url": "https://viveroelgranjero.com",
+    "url": "https://viveroelgranjero.netlify.app",
     "telephone": "+573052090482",
     "email": "Viveroelgranjero@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Cl. 45 Sur #83-121",
+      "streetAddress": "Tv. 45 Sur #2",
       "addressLocality": "San Antonio de Prado",
       "addressRegion": "Antioquia",
       "addressCountry": "CO"
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-      "opens": "07:00",
-      "closes": "18:00"
-    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday","Sunday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
     "sameAs": [
       "https://www.instagram.com/viveroelgranjero",
       "https://www.facebook.com/viveroelgranjero",
@@ -604,7 +615,7 @@
             <div>
               <div class="contact-info-label" style="font-family:'Nunito',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--verde-claro); margin-bottom:0.2rem;">Dirección (Ver ubicación en Google Maps)</div>
               <p class="contact-info-value" style="font-family:'Nunito',sans-serif; font-size:0.85rem; color:var(--blanco); margin:0; line-height:1.4;">
-                Cl. 45 Sur #83-121, San Antonio de Prado<br>
+                Tv. 45 Sur #2, San Antonio de Prado<br>
                 Medellín, Antioquia
               </p>
             </div>
@@ -616,10 +627,10 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </div>
             <div>
-              <div class="contact-info-label" style="font-family:'Nunito',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--verde-claro); margin-bottom:0.2rem;">Horarios (Agenda tu visita)</div>
+              <div class="contact-info-label" style="font-family:'Nunito',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--verde-claro); margin-bottom:0.2rem;">Horarios de atención</div>
               <p class="contact-info-value" style="font-family:'Nunito',sans-serif; font-size:0.85rem; color:var(--blanco); margin:0; line-height:1.4;">
-                <strong>Agenda tu visita:</strong> Lunes a Viernes de 7:00 am - 6:00 pm<br>
-                <strong>Abierto al público:</strong> Sábados y Domingos de 2:00 pm a 6:00 pm
+                <strong>Lunes a Viernes:</strong> 8:00 am – 6:00 pm<br>
+                <strong>Sábados y Domingos:</strong> 9:00 am – 6:00 pm
               </p>
             </div>
           </a>
@@ -786,7 +797,8 @@
           <ul class="space-y-2.5">
             <li><a href="#nosotros"    class="footer-link">Quiénes somos</a></li>
             <li><a href="#tips"        class="footer-link">Tips de cuidado</a></li>
-            <li><a href="#catalogo"    class="footer-link">Catálogo</a></li>
+            <li><a href="catalogo.html" class="footer-link">Catálogo</a></li>
+            <li><a href="faq.html"      class="footer-link">Preguntas Frecuentes</a></li>
             <li><a href="#testimonios" class="footer-link">Testimonios</a></li>
             <li><a href="#contacto"    class="footer-link">Contacto</a></li>
           </ul>
@@ -805,6 +817,17 @@
           <li><button onclick="document.getElementById('catalogo')?.scrollIntoView({behavior:'smooth'}); setTimeout(()=>{state.activeFilter='macetas'; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter==='macetas')); renderCatalog()},500)" class="footer-link text-left">🏺 Macetas</button></li>
           <li><button onclick="document.getElementById('catalogo')?.scrollIntoView({behavior:'smooth'}); setTimeout(()=>{state.activeFilter='sustratos'; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter==='sustratos')); renderCatalog()},500)" class="footer-link text-left">🌱 Sustratos</button></li>
         </ul>
+      </div>
+    </div>
+
+    <!-- Recursos para agentes de IA -->
+    <div class="border-t pt-6 mb-4" style="border-color:rgba(255,255,255,0.06)">
+      <div style="background:rgba(127,175,58,0.08); border:1px solid rgba(127,175,58,0.15); border-radius:6px; padding:0.875rem 1.25rem; display:flex; flex-wrap:wrap; gap:0.5rem 1.5rem; align-items:center;">
+        <span style="font-family:'Nunito',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(127,175,58,0.7); flex-shrink:0;">Para agentes de IA:</span>
+        <a href="/llms.txt" style="font-family:'Nunito',sans-serif; font-size:0.75rem; color:rgba(127,175,58,0.8); text-decoration:none;" onmouseover="this.style.color='#7FAF3A'" onmouseout="this.style.color='rgba(127,175,58,0.8)'">llms.txt</a>
+        <a href="/llms-full.txt" style="font-family:'Nunito',sans-serif; font-size:0.75rem; color:rgba(127,175,58,0.8); text-decoration:none;" onmouseover="this.style.color='#7FAF3A'" onmouseout="this.style.color='rgba(127,175,58,0.8)'">llms-full.txt</a>
+        <a href="/sitemap.xml" style="font-family:'Nunito',sans-serif; font-size:0.75rem; color:rgba(127,175,58,0.8); text-decoration:none;" onmouseover="this.style.color='#7FAF3A'" onmouseout="this.style.color='rgba(127,175,58,0.8)'">sitemap.xml</a>
+        <a href="/faq.html" style="font-family:'Nunito',sans-serif; font-size:0.75rem; color:rgba(127,175,58,0.8); text-decoration:none;" onmouseover="this.style.color='#7FAF3A'" onmouseout="this.style.color='rgba(127,175,58,0.8)'">FAQ</a>
       </div>
     </div>
 

@@ -1,0 +1,61 @@
+# ================================================================
+# netlify.toml — Vivero El Granjero
+# Optimizado para Agentic Web / Is Agentic 100/100
+# ================================================================
+
+# ─── Contexto de producción ────────────────────────────────────
+[build]
+  publish = "."
+
+# ─── Encabezados globales ──────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Permite que las CDN distingan entre respuestas HTML vs Markdown
+    Vary                   = "Accept, Accept-Encoding"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options        = "SAMEORIGIN"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    # Permite a todos los robots (incluidos agentes de IA) indexar
+    X-Robots-Tag           = "index, follow"
+
+# ─── Archivos para agentes de IA ──────────────────────────────
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type  = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+    Vary          = "Accept, Accept-Encoding"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type  = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+    Vary          = "Accept, Accept-Encoding"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type  = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+
+# ─── Sitemap ──────────────────────────────────────────────────
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type  = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=43200"
+
+# ─── Páginas HTML con Vary correcto ───────────────────────────
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Vary          = "Accept, Accept-Encoding"
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# ─── Página de error 404 (HTTP real) ──────────────────────────
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
