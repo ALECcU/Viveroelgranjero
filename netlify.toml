@@ -54,8 +54,17 @@
     Vary          = "Accept, Accept-Encoding"
     Cache-Control = "public, max-age=3600, must-revalidate"
 
+# ─── Negociación de contenido Markdown ──────────────────────────
+# Redirige a llms.txt cuando se solicita explícitamente Markdown en la raíz
+[[redirects]]
+  from = "/"
+  to = "/llms.txt"
+  status = 200
+  conditions = { Accept = ["text/markdown"] }
+
 # ─── Página de error 404 (HTTP real) ──────────────────────────
 [[redirects]]
   from   = "/*"
   to     = "/404.html"
   status = 404
+
